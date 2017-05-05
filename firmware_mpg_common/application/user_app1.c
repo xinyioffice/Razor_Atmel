@@ -136,7 +136,40 @@ State Machine Function Definitions
 /* Wait for ??? */
 static void UserApp1SM_Idle(void)
 {
-
+  if(G_u32SystemTime1ms%2000 == 0)
+  {
+    switch(G_u32SystemTime1s)
+    {
+    case 0:
+    case 1:
+    case 2: LedBlink(RED, 500);break;
+    case 3:
+    case 4: LedBlink(RED, 250);break;
+    case 5:
+    case 6: LedBlink(RED, 125);break;
+    case 7:
+    case 8: LedBlink(RED, 63);break;
+    case 9:
+    case 10: LedBlink(RED, 32);break;
+    case 11:
+    case 12: LedBlink(RED, 16);break;
+    case 13:
+    case 14: LedBlink(RED, 8);break;
+    case 15:
+    case 16: LedBlink(RED, 16);break;
+    case 17:
+    case 18: LedBlink(RED, 32);break;
+    case 19:
+    case 20: LedBlink(RED, 63);break;
+    case 21:
+    case 22: LedBlink(RED, 125);break;
+    case 23:
+    case 24: LedBlink(RED, 250);break;
+    case 25:
+    case 26: LedBlink(RED, 500);break;
+    default: LedBlink(RED, 500);break;
+    }
+  }
 } /* end UserApp1SM_Idle() */
     
 #if 0
